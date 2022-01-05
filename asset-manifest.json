@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/bitcoin-go/static/css/main.7f234a31.chunk.css",
+    "main.js": "/bitcoin-go/static/js/main.86bceb25.chunk.js",
+    "main.js.map": "/bitcoin-go/static/js/main.86bceb25.chunk.js.map",
+    "runtime-main.js": "/bitcoin-go/static/js/runtime-main.32b42e8a.js",
+    "runtime-main.js.map": "/bitcoin-go/static/js/runtime-main.32b42e8a.js.map",
+    "static/js/2.17a489b6.chunk.js": "/bitcoin-go/static/js/2.17a489b6.chunk.js",
+    "static/js/2.17a489b6.chunk.js.map": "/bitcoin-go/static/js/2.17a489b6.chunk.js.map",
+    "static/js/3.3474d3de.chunk.js": "/bitcoin-go/static/js/3.3474d3de.chunk.js",
+    "static/js/3.3474d3de.chunk.js.map": "/bitcoin-go/static/js/3.3474d3de.chunk.js.map",
+    "index.html": "/bitcoin-go/index.html",
+    "static/css/main.7f234a31.chunk.css.map": "/bitcoin-go/static/css/main.7f234a31.chunk.css.map",
+    "static/js/2.17a489b6.chunk.js.LICENSE.txt": "/bitcoin-go/static/js/2.17a489b6.chunk.js.LICENSE.txt",
+    "static/media/styles.scss": "/bitcoin-go/static/media/Montserrat.3cd78665.ttf",
+    "static/media/avatar.e46db3f8.png": "/bitcoin-go/static/media/avatar.e46db3f8.png",
+    "static/media/contacts.d2127828.svg": "/bitcoin-go/static/media/contacts.d2127828.svg",
+    "static/media/statistics.f6208542.svg": "/bitcoin-go/static/media/statistics.f6208542.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.32b42e8a.js",
+    "static/js/2.17a489b6.chunk.js",
+    "static/css/main.7f234a31.chunk.css",
+    "static/js/main.86bceb25.chunk.js"
+  ]
+}
