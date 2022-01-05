@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Montserrat, sans-serif;
+    color: $clr7;
+    line-height: 1.6;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(34, 34, 34);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 1rem;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    color: $clr5;
+}
+
+h1 {
+    font-size: em(46px);
+}
+
+p {
+    margin: 0 0 1rem;
+    max-width: 42ch;
+}
+
+input {
+    @include regular-font;
+    display: block;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    background-color: $clr6;
+    margin-bottom: 10px;
+    &:focus{
+        outline: none;
+    }
+
+}
+
+a {
+    text-decoration: none;
+    color: $clr3;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    @include regular-font;
+    border: none;
+    background-color: $clr5;
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    display: block;
+}

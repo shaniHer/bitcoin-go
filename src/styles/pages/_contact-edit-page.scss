@@ -1,0 +1,7 @@
+.contact-edit {
+    @include items-layout-center;
+
+    .avatar {
+        width: rem(120px);
+    }
+}

@@ -1,0 +1,39 @@
+.moves-list {
+    justify-content: center;
+    .title {
+        color: $clr5;
+        font-weight: 900;
+        padding-top: 30px;
+    }
+    .move-details {
+        padding-bottom: 10px;
+        .move-status,
+        .move-time {
+            @include small-font;
+            text-align: right;
+        }
+        .amount-btc {
+            color: $clr1;
+        }
+        .amount-usd {
+            color: $clr8;
+        }
+        
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(4, 1fr);
+        
+        @media (max-width: $break-narrow) {
+            grid-template-columns: repeat(2, 1fr);
+            .move-status,
+            .move-time {
+                text-align: unset;
+            }
+            .move-amount,
+            .move-time{
+                text-align: right;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,19 @@
+.app-header {
+    @include items-layout-spacebetween(center);
+    padding: 20px 0px;
+    .main-nav {
+        display: flex;
+        > *:not(:last-child) {
+            margin-inline-end: 25px;
+        }
+    }
+
+    .logo {
+        font-family: Lobster, serif;
+        font-size: rem(30px);
+        color: $clr4;
+        .bitcoin-icon {
+            font-weight: 900;
+        }
+    }
+}

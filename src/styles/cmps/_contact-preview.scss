@@ -1,0 +1,18 @@
+.contact-card {
+    display: flex;
+    padding: 10px 0px;
+    gap: 5px;
+    border-bottom: 1px solid $clr6;
+
+    .contact-details-preview {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        :first-child {
+            @include regular-font;
+        }
+        :nth-child(2) {
+            @include small-font;
+        }
+    }
+}

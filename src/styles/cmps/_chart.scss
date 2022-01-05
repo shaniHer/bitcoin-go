@@ -1,0 +1,6 @@
+.chart {
+    margin-top: 15px;
+    .chart-desc {
+       @include small-font;
+    }
+}

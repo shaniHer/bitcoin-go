@@ -1,0 +1,7 @@
+.signup {
+    @include items-layout-center;
+    >:first-child {
+        font-size: rem($larger);
+        color: $clr4
+    }
+}

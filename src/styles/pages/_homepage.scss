@@ -1,0 +1,28 @@
+.homepage {
+    .greet-user {
+        color: $clr5;
+        font-size: $large;
+        font-weight: 900;
+        padding: 10px 0px;
+    }
+    .status {
+        @include items-layout-spacebetween;
+        .balance {
+            :nth-child(2) span {
+                color: $clr1;
+            }
+            :nth-child(3) span {
+                color: $clr8;
+            }
+        }
+        .balance-title {
+            @include small-font;
+        }
+        .rate {
+            :nth-child(2) {
+                font-size: $large;
+            }
+        }
+    }
+
+}
