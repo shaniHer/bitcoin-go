@@ -13,9 +13,9 @@ import { AppHeader } from './cmps/AppHeader';
 //a route but their children cmps don't receive the props
 function _App({ loggedInUser }) {
 
-  const PrivateRoute = (props) => {
-    return loggedInUser ? <Route path={props.path} component={props.component} /> : <Redirect to="/signup" />
-  }
+  // const PrivateRoute = (props) => {
+  //   return loggedInUser ? <Route path={props.path} component={props.component} /> : <Redirect to="/signup" />
+  // }
 
   return (
     <Router>
@@ -24,10 +24,12 @@ function _App({ loggedInUser }) {
         <Switch>
           <Route path="/contact/edit/:id?" component={ContactEditPage} />
           <Route path="/contact/:id" component={ContactDetailsPage} />
-          <PrivateRoute exact path="/contact" component={ContactPage} />
+          <Route exact path="/contact" component={ContactPage} />
+          {/* <PrivateRoute exact path="/contact" component={ContactPage} /> */}
           <Route path="/statistic" component={StatisticPage} />
           <Route exact path="/signup" component={SignupPage} />
-          <PrivateRoute path="/" component={HomePage} />
+          <Route path="/" component={HomePage} />
+          {/* <PrivateRoute path="/" component={HomePage} /> */}
         </Switch>
       </main>
     </Router>

@@ -3,17 +3,28 @@ import { useDispatch, useSelector } from 'react-redux'
 import { MovesList } from '../cmps/MovesList.jsx'
 import cloneDeep from 'lodash/cloneDeep'
 import { getRate } from '../store/actions/bitcoinActions.js'
+import { setLoggedInUser } from '../store/actions/userActions.js'
+import _ from "underscore"
 
 
 export const HomePage = () => {
-    const { loggedInUser } = useSelector(state => state.userModule)
-    const { name, coins } = loggedInUser
     const { rate } = useSelector(state => state.bitcoinModule)
+    const { loggedInUser } = useSelector(state => state.userModule)
     const dispatch = useDispatch()
 
     useEffect(() => {
         dispatch(getRate())
+        setUser()
     }, [])
+
+    const setUser = async () => {
+        if (loggedInUser) return
+        try {
+            await dispatch(setLoggedInUser('David'))
+        } catch (err) {
+            console.log('Had issues signing-up', err)
+        }
+    }
 
     const movesToShow = () => {
         const { moves } = loggedInUser
@@ -28,21 +39,23 @@ export const HomePage = () => {
 
     return (
         <div className="homepage">
-            <div className="greet-user">
-                Welcome back {name},
-            </div>
-            {rate && <div className="status">
-                <div className="balance">
-                    <div className="balance-title">CURRENT BALANCE</div>
-                    <div>BIT: <span>{'\u20BF'} {coins}</span></div>
-                    <div>USD: <span>{formatUsd(coins * rate)}</span> </div>
+            {loggedInUser && <div>
+                <div className="greet-user">
+                    Welcome back {loggedInUser.name},
                 </div>
-                <div className="rate">
-                    <div className="balance-title">CURRENT BTC USD</div>
-                    <div> {formatUsd(rate)}</div>
-                </div>
+                {rate && <div className="status">
+                    <div className="balance">
+                        <div className="balance-title">CURRENT BALANCE</div>
+                        <div>BIT: <span>{'\u20BF'} {loggedInUser.coins}</span></div>
+                        <div>USD: <span>{formatUsd(loggedInUser.coins * rate)}</span> </div>
+                    </div>
+                    <div className="rate">
+                        <div className="balance-title">CURRENT BTC USD</div>
+                        <div> {formatUsd(rate)}</div>
+                    </div>
+                </div>}
+                <MovesList title={'Last 3 moves'} moves={movesToShow()} rate={rate} />
             </div>}
-            <MovesList title={'Last 3 moves'} moves={movesToShow()} rate={rate}/>
         </div>
 
     )

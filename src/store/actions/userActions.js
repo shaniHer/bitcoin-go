@@ -17,7 +17,7 @@ export function setLoggedInUser(name) {
   return async (dispatch) => {
     try {
       const loggedInUser = await userService.signUp(name)
-      console.log(loggedInUser)
+      console.log('user actions',loggedInUser)
       dispatch({ type: 'SET_LOGGEDIN_USER', loggedInUser })
 
     } catch (err) {
